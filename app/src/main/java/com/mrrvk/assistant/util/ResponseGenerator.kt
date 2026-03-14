@@ -231,7 +231,7 @@ object ResponseGenerator {
         val userName = MrRvkApp.getUserName(context)
         val lang = detectLanguage(context)
         val cal = Calendar.getInstance()
-        val hour = cal.get(Calendar.HOUR)
+        val hour = cal.get(Calendar.HOUR).let { if (it == 0) 12 else it }
         val minute = cal.get(Calendar.MINUTE)
         val amPm = if (cal.get(Calendar.AM_PM) == Calendar.AM) "AM" else "PM"
 

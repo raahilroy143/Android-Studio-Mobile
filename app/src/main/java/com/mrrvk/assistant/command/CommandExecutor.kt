@@ -578,7 +578,6 @@ class CommandExecutor(private val context: Context) {
     }
 
     private fun openCalculator(response: String) {
-        speak(response)
         openApp("calculator", response)
     }
 
@@ -597,7 +596,6 @@ class CommandExecutor(private val context: Context) {
     }
 
     private fun openNotes(response: String) {
-        speak(response)
         openApp("notes", response)
     }
 

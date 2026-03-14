@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0F"
+    android:padding="24dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="MR. RVK"
+        android:textColor="#00E5FF"
+        android:textSize="36sp"
+        android:fontFamily="monospace"
+        android:letterSpacing="0.3" />
+
+    <TextView
+        android:id="@+id/subtitleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleText"
+        android:gravity="center"
+        android:text="AI ASSISTANT SETUP"
+        android:textColor="#5000E5FF"
+        android:textSize="14sp"
+        android:fontFamily="monospace"
+        android:layout_marginTop="8dp" />
+
+    <!-- Status Text -->
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subtitleText"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Step 1: Enter Your Name"
+        android:textColor="#00E5FF"
+        android:textSize="16sp"
+        android:fontFamily="monospace" />
+
+    <!-- Step 1: Name Input -->
+    <LinearLayout
+        android:id="@+id/setupStep1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/statusText"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mr. RVK will address you by this name"
+            android:textColor="#80FFFFFF"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/nameInput"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:background="@drawable/input_bg"
+            android:hint="Enter your name"
+            android:textColorHint="#50FFFFFF"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:fontFamily="monospace"
+            android:paddingHorizontal="16dp"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/btn_primary"
+            android:text="NEXT"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:fontFamily="monospace" />
+    </LinearLayout>
+
+    <!-- Step 2: Permissions -->
+    <LinearLayout
+        android:id="@+id/setupStep2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/statusText"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mr. RVK needs permissions to control your device fully. Grant all permissions for the best experience."
+            android:textColor="#80FFFFFF"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="24dp"
+            android:lineSpacingMultiplier="1.3" />
+
+        <Button
+            android:id="@+id/btnGrantPermissions"
+            android:layout_width="260dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_primary"
+            android:text="GRANT ALL PERMISSIONS"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:fontFamily="monospace" />
+    </LinearLayout>
+
+    <!-- Step 3: Final -->
+    <LinearLayout
+        android:id="@+id/setupStep3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/statusText"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Everything is ready! Mr. RVK will now start running in the background.\n\nSay Mr. RVK anytime to activate your assistant."
+            android:textColor="#80FFFFFF"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:fontFamily="monospace"
+            android:lineSpacingMultiplier="1.4"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/btnFinish"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_primary"
+            android:text="ACTIVATE MR. RVK"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:fontFamily="monospace" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            android:indeterminateTint="#00E5FF" />
+    </LinearLayout>
+</RelativeLayout>

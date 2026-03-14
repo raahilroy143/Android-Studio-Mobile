@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#00E5FF</color>
+    <color name="primary_dark">#00B8D4</color>
+    <color name="accent">#18FFFF</color>
+    <color name="background">#0A0A0F</color>
+    <color name="surface">#15151F</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B0FFFFFF</color>
+    <color name="active_green">#00FF88</color>
+    <color name="listening_amber">#FFAB00</color>
+</resources>
